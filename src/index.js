@@ -2,6 +2,12 @@ import React from "react";
 import { Query } from "react-apollo";
 import { createMonoQuery, gql } from "monoquery";
 
+try {
+  var { ListPathConsumer } = require("react-listpath");
+} catch (e) {
+  var ListPathConsumer = ({ children }) => children();
+}
+
 const MonoQueryContext = React.createContext("monoquery");
 
 export const MonoQuery = ({ children, query, ...rest }) => (
@@ -21,7 +27,11 @@ export const MonoQuery = ({ children, query, ...rest }) => (
 
 export const Fragments = ({ fragments, children }) => (
   <MonoQueryContext.Consumer>
-    {data => children(data.getResultsFor(fragments))}
+    {data => (
+        <ListPathConsumer>
+        {listPath => children(data.getResultsFor(fragments, listPath))}
+      </ListPathConsumer>
+    )}
   </MonoQueryContext.Consumer>
 );
 
