@@ -1,6 +1,6 @@
 {
   "name": "react-monoquery",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Collect graphql fragments and distribute data with apollo and react",
   "repository": "github.com/brysgo/monoquery",
   "main": "lib/index.js",
