@@ -1,5 +1,5 @@
 const babelOptions = {
-  presets: ["env"],
+  presets: ["env", "react"],
   plugins: [
     [
       "transform-runtime",

@@ -1,9 +1,9 @@
 module.exports = {
-  type: "web-module",
+  type: "react-component",
   npm: {
     esModules: true,
     umd: {
-      global: "monoQuery",
+      global: "reactMonoQuery",
       externals: {}
     }
   }
