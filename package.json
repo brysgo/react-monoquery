@@ -2,7 +2,6 @@
   "name": "react-monoquery",
   "version": "0.0.0-semantic-release",
   "description": "Collect graphql fragments and distribute data with apollo and react",
-  "repository": "github.com/brysgo/monoquery",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
